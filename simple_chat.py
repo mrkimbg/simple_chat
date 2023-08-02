@@ -3,8 +3,6 @@ from streamlit_chat import message
 import requests
 import openai
 
-openai.api_key = st.text_input('Your OpenAI API Key', type = 'password')
-
 if 'messages' not in st.session_state:
     st.session_state['messages'] = []
 
@@ -20,6 +18,8 @@ def chat(user_text):
     messages.append(assistant_turn)
 
 st.title("초간단 챗봇 서비스")
+
+openai.api_key = st.text_input('Your OpenAI API Key', type = 'password')
 
 row1 = st.container()
 row2 = st.container()
