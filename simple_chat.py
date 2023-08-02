@@ -3,7 +3,7 @@ from streamlit_chat import message
 import requests
 import openai
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 if 'messages' not in st.session_state:
     st.session_state['messages'] = []
