@@ -3,7 +3,7 @@ from streamlit_chat import message
 import requests
 import openai
 
-openai.api_key = st.text_input('Your OpenAI API Key', type = 'password', disabled=not input_text)
+openai.api_key = st.text_input('Your OpenAI API Key', type = 'password')
 
 if 'messages' not in st.session_state:
     st.session_state['messages'] = []
